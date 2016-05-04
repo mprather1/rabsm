@@ -1,6 +1,7 @@
 var singleUser = Backbone.Model.extend({
+  urlRoot: "http://localhost:3000/user",
   defaults: {
-    name: "mike",
-    email: "test@test.com"
+    name: null,
+    email: null
   }
 });
