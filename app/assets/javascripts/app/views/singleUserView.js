@@ -2,7 +2,7 @@ singleUserView = Backbone.View.extend({
 
   tagName: 'li',
 
-  template: _.template("<%= name %>"),
+  template: _.template("<a href=#user/<%= id %>><%= name %></a>"),
 
   render: function() {
     var userTemplate = this.template(this.model.toJSON());

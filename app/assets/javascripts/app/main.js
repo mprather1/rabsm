@@ -1,4 +1,8 @@
 $(function() {
   var userGroupView = new userCollectionView();
-  $(document.body).html(userGroupView.el)
+  $('#allUsers').html(userGroupView.el)
 });
+
+var Router = new userRouter();
+
+Backbone.history.start();

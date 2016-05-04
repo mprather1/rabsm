@@ -1,13 +1,16 @@
-userRouter = Backbone.Router.extend({
+var userRouter = Backbone.Router.extend({
   routes: {
-    'users/:id' : "showUser"
+    "user/:id" : "showUser"
   },
 
   showUser: function(id) {
-    var userInfo = new singleUser _.id:id
-    user.fetch()
-      success: function() {
-        $('#userInfo').html(singleUserView.render().el)
+    var userInformation = new singleUser({id: id});
+    userInformation.fetch();
+    var userInformationView = new singleUserView({model: userInformation});
+    $('#userInfo').html(userInformationView.render().el);
       }
-  }
+
+    // showUser: function(id){
+    //   console.log(id)
+    // }
 });
